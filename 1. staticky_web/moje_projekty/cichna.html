@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="cz">
+<head>
+<style>
+body {background-color: rgb(212, 195, 168);}
+h4 {text-align: center;}
+p {text-align: center;}
+div {text-align: center;}
+img{
+  display: block;
+  margin: auto;
+}
+button:disabled {
+            background-color: #cccccc;
+            color: #666666;
+            cursor: not-allowed;
+        }
+button  {
+            background-color: #007bff;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            cursor: pointer;
+        }
+</style>
+  <title>ČichNoviny</title>
+</head>
+  <body>
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <img src="cichnoviny.webp" alt="CichNovinyLogo" width="680px" height="197px">
+    <div>
+      <h4 style="color:rgb(161, 118, 52);">Studentský časopis</h4>
+      <p><b>By Čichnoviny · Launched 3 months ago</b></p>
+      <input type="text" id="emailInput" placeholder="Zadejte váš e-mail">
+      <button id="subscribeBtn" disabled>Subscribe</button>
+      <h2><a href="index.html">ČichnaBar</a> otevřený každé pondělí až pátek!</h2>
+      <p>By subscribing, you agree Substack's <a href="https://substack.com/tos">Terms of Use</a>, 
+        and acknowledge its <a href="https://substack.com/ccpa#personal-data-collected">Information Collection Notice</a> 
+        and <a href="https://substack.com/privacy">Privacy Policy</a>.</p>
+    </div>
+    <script>
+        const emailInput = document.getElementById('emailInput');
+        const subscribeBtn = document.getElementById('subscribeBtn');
+
+        
+        emailInput.addEventListener('input', () => {
+            if (emailInput.value.trim() !== "") {
+                subscribeBtn.disabled = false; 
+            } else {
+                subscribeBtn.disabled = true;
+            }
+        });
+    </script>
+  </body>
+
+</html>
