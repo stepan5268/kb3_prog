@@ -3,6 +3,9 @@
 <head>
 <style>
 body {background-color: rgb(216, 112, 27);}
+table, th, td {
+  border:1px solid black;
+}
 </style>
   <title>Můj první web!</title>
 </head>
@@ -10,7 +13,16 @@ body {background-color: rgb(216, 112, 27);}
     <h1><strong>Čichna Bar</strong></h1>
     <div>
       <h2><em>PIVKOSE</em></h2>
-      <p id="alcohol_1">Borisovka, 25 kč</p>
+      <table style="width:100%">
+        <tr>
+          <th>Název</th>
+          <th>Cena</th>
+        </tr>
+        <tr>
+            <th>Borisovka</th>
+            <th>25 kč</th>
+        </tr>
+      </table>
     </div>
     <iframe src="https://www.w3schools.com" title="W3Schools Free Online Web Tutorials"></iframe>
   </body>
