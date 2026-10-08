@@ -1,20 +1,76 @@
 body {
-    background-color: black;
+  background-color: black;
+  font-family: SF system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-
-#nav {
-    position: sticky;
-    top: 20px;
-    display: flex;
-    justify-content: space-around;
-    padding-left: 20px;
-    color: white;
-    max-width: 80%;
+.navbar {
+  display: flex;
+  justify-content: center;
+  padding: 16px 16px;
+  margin: auto;
+  gap: 16px;
+  position: sticky;
+  top: 20px;
 }
 
-#discord {
-    display: flex;
-    justify-content: space-around;
-    padding-left: 20px;
+.nav-inside {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 9999px;
+  width: 100%;
+  max-width: 450px;
+  height: 64px;
+}
+
+.nav-bg-video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.nav-links {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  list-style: none;
+  gap: 36px;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+}
+
+.nav-links a:hover {
+  opacity: 0.75;
+}
+
+.button {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0px 32px;
+  border-radius: 9999px;
+  box-shadow: 0 4px 20px rgb(255, 255, 255);
+  margin: 3px;
+}
+
+.button:hover {
+  background-color: #f0f0f0;
 }
