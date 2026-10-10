@@ -1,11 +1,14 @@
+/* Web Design */
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background-color: #050505;
   font-family: 'Inter Display', sans-serif;
+  background-color: rgb(5, 5, 5);
   margin: 0%;
   height: 100%;
-}
-.first-section {
-  background-color: #050505;
 }
 
 .content {
@@ -13,10 +16,14 @@ body {
   margin: auto;
 }
 
-.container {
-  display: flex; 
-  align-items: center;
-  gap: 10px;
+/* Sections */
+
+#about-me {
+  background-color: rgb(5, 5, 5);
+}
+
+#assets {
+  background-color: rgb(18, 18, 18);
 }
 
 .chapter-1 {
@@ -64,6 +71,52 @@ body {
   width: 100%;
 }
 
+.chapter-2 {
+  font-family: monospace;
+  color:white;
+  font-size: 22px;
+  text-align: center;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  padding-top: 50px;
+  padding-bottom: 25px;
+}
+
+.chapter-2-content1 {
+  text-align: center;
+  font-size: 56px;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  padding-bottom: 25px;
+}
+
+.chapter-2-content2 {
+  text-align: center;
+  font-size: 22px;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  max-width: 1920px;
+  padding-bottom: 110px;
+}
+
+.chapter-2-content3 {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  padding-bottom: 50px;
+  overflow: auto;
+  width: 100%;
+}
+
+.chapter-2-content4 {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  padding-bottom: 50px;
+  overflow: auto;
+  width: 100%;
+}
+
+/* Text Design */
+
 .title-white-big {
   color:rgb(255, 255, 255);
   font-size: 56px;
@@ -72,16 +125,25 @@ body {
   height: 50px;
 }
 
-.title-white {
-  color:rgb(255, 255, 255);
-  font-size: 48px;
-  margin-block-start: 0em;
-  margin-block-end: 0em;
-}
-
 .title-gray-big {
   color:rgba(186, 194, 209, 0.76);
   font-size: 56px;
+  margin-block-start: 0.5em;
+  margin-block-end: 0em;
+}
+
+.title-gray-big span {
+  display: inline-block;
+  background-image: linear-gradient(to right, #ff7e5f, #feb47b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: wave 2s ease-in-out infinite;
+}
+
+.title-white {
+  color:rgb(255, 255, 255);
+  font-size: 48px;
   margin-block-start: 0em;
   margin-block-end: 0em;
 }
@@ -139,12 +201,26 @@ body {
   letter-spacing: 0em;
 }
 
+/* Custom Margins, Padding, ... */
+
 .bpadding-25 {
   padding-bottom: 25px;
 }
 
+.tpadding-75 {
+  padding-top: 75px;
+}
+.lpadding-25 {
+  padding-left: 25px;
+}
+
 .w450 {
   max-width: 450px;
+}
+
+.m41 {
+  margin-top: 41px;
+  margin-bottom: 41px;
 }
 
 .left {
@@ -159,34 +235,43 @@ body {
   text-align: justify;
 }
 
+/* Nav Bar */
+
 .navbar {
   display: flex;
   justify-content: center;
-  padding: 16px 16px;
+  padding: 10px 10px;
   margin: auto;
   gap: 16px;
   position: sticky;
   top: 20px;
+  z-index: 1;
 }
 
-.nav-inside {
+.nav-left {
   position: relative;
-  overflow: hidden;
   display: flex;
   align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(40px);
+  border-radius: 9999px;
+  width: 100%;
+  max-width: 56px;
+  height: 56px;
+}
+
+.nav-right {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(40px);
   justify-content: space-between;
   border-radius: 9999px;
   width: 100%;
   max-width: 450px;
-  height: 64px;
-}
-
-.nav-bg-video {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
+  height: 56px;
 }
 
 .nav-links {
@@ -207,6 +292,11 @@ body {
 
 .nav-links a:hover {
   opacity: 0.75;
+  text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.7);
+}
+
+.nav-circle-button:hover {
+  box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.2);
 }
 
 .nav-button {
@@ -218,17 +308,17 @@ body {
   align-self: stretch;
   background-color: #ffffff;
   color: #000000;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   text-decoration: none;
   padding: 0px 32px;
   border-radius: 9999px;
-  box-shadow: 0 0 20px rgb(255, 255, 255);
   margin: 3px;
 }
 
 .nav-button:hover {
   background-color: #f0f0f0;
+  box-shadow: 0px 5px 15px 0px rgba(255, 255, 255, 0.20);
 }
 
 .button {
@@ -240,15 +330,131 @@ body {
   align-self: stretch;
   background-color: #ffffff;
   color: #000000;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   text-decoration: none;
   height: 48px;
   width: 220px;
   border-radius: 15px;
-  box-shadow: 0 0 12px rgb(255, 255, 255);
 }
 
 .button:hover {
   background-color: #f0f0f0;
+  box-shadow: 0px 10px 15px 0px rgba(255, 255, 255, 0.20);
+}
+
+.line-content {
+  width: 1920px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+}
+
+.line-track {
+  display: flex;
+  gap: 30px;
+  width: max-content;
+  animation: scrollLeft 25s linear infinite;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.box-450-410 {
+  position: relative;
+  display: flex;
+  background-color: rgb(12, 12, 12);
+  border-radius: 20px;
+  width: 450px; 
+  min-width: 450px;
+  height: 410px;
+  flex-shrink: 0;
+  overflow: hidden;
+
+  img {
+    margin-top: 10px;
+    margin-left: 25px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  img:hover {
+    transform: scale(1.1);
+  }
+}
+
+.img-box {
+  border-radius: 10px;
+}
+
+/* Wawy Text Design */
+
+.title-gray-big span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.title-gray-big span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.title-gray-big span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.title-gray-big span:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+.title-gray-big span:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+.title-gray-big span:nth-child(6) {
+    animation-delay: 1s;
+}
+
+.title-gray-big span:nth-child(7) {
+    animation-delay: 1.2s;
+}
+
+.title-gray-big span:nth-child(8) {
+    animation-delay: 1.4s;
+}
+
+.title-gray-big span:nth-child(9) {
+    animation-delay: 1.6s;
+}
+
+.title-gray-big span:nth-child(10) {
+    animation-delay: 1.8s;
+}
+
+.title-gray-big span:nth-child(11) {
+    animation-delay: 2s;
+}
+
+.title-gray-big span:nth-child(12) {
+    animation-delay: 2.2s;
+}
+
+.title-gray-big span:nth-child(13) {
+    animation-delay: 2.4s;
+}
+
+.title-gray-big span:nth-child(14) {
+    animation-delay: 2.6s;
+}
+
+@keyframes wave {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
 }
