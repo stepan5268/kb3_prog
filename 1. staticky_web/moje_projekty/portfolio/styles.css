@@ -9,6 +9,8 @@ body {
   background-color: rgb(5, 5, 5);
   margin: 0%;
   height: 100%;
+  animation-name: opacity;
+  animation-duration: 3s;
 }
 
 .content {
@@ -364,6 +366,11 @@ body {
   100% {
     transform: translateX(-50%);
   }
+}
+
+@keyframes opacity {
+  from {opacity: 0%}
+  to {opacity: 100%}
 }
 
 .box-450-410 {
